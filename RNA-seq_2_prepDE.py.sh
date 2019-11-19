@@ -1,0 +1,1 @@
+prepDE.py -i sample.txt -g gene_count_matrix.csv -t transcript_count_matrix.csv
