@@ -1,15 +1,5 @@
 #!/bin/sh
 
-#PBS -N centromere
-#PBS -l nodes=1:ppn=20
-#PBS -o pbs_out.$PBS_JOBID
-#PBS -e pbs_err.$PBS_JOBID
-#PBS -l walltime=12000:00:00
-#PBS -q batch
-
-cd $PBS_O_WORKDIR
-
-
 #blasnt6_to_cluster_nu.pl(sequenced length) & list2rate.pl(chip input numbers) & base_id_list_get_seq_part.pl
 
 ln -s Galaxy370-[Contigs_from_dataset_343_based_on_clustering].fasta CLcontigs.fa
