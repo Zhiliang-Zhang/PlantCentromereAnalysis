@@ -1,14 +1,5 @@
 #!/bin/sh
 
-#PBS -N RNA-SEQ
-#PBS -l nodes=1:ppn=20
-#PBS -o pbs_out.$PBS_JOBID
-#PBS -e pbs_err.$PBS_JOBID
-#PBS -l walltime=1000:00:00
-#PBS -q batch
-
-cd $PBS_O_WORKDIR
-
 for i in *_1.clean.fq.gz; 
 do
 i=${i%_1.clean.fq.gz*}; 
