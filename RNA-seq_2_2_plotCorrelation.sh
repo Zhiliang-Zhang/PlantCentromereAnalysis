@@ -1,14 +1,5 @@
 #!/bin/sh
 
-#PBS -N 0
-#PBS -l nodes=1:ppn=20
-#PBS -o pbs_out.$PBS_JOBID
-#PBS -e pbs_err.$PBS_JOBID
-#PBS -l walltime=1000:00:00
-#PBS -q batch
-
-cd $PBS_O_WORKDIR
-
 samtools index *.bam
 
 multiBamSummary bins --bamfiles DR-1.bam DR-2.bam DR-3.bam --minMappingQuality 30 --binSize=100 --labels DR-1 DR-2 DR-3 -out readCounts.npz --outRawCounts readCounts.tab
