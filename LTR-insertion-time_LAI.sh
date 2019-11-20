@@ -1,14 +1,5 @@
 #!/bin/sh
 
-#PBS -N LTR insertion time
-#PBS -l nodes=1:ppn=20
-#PBS -o pbs_out.$PBS_JOBID
-#PBS -e pbs_err.$PBS_JOBID
-#PBS -l walltime=12000:00:00
-#PBS -q batch
-
-cd $PBS_O_WORKDIR
-
 ##package: ltrharvest, ltr_finder, LTR_retriever
 
 ~/software/genometools-1.5.9/bin/gt suffixerator -db genome.fa -indexname genome -tis -suf -lcp -des -ssp -sds -dna
