@@ -16,5 +16,6 @@ done
 
 for i in *.bam; 
 do 
-i=${i%.bam*}; stringtie -p 20 -G genome.gene.gff3 -o ${i}.gtf ${i}.bam -A gene_abund.tab -B -e
+i=${i%.bam*}; 
+stringtie -p 20 -G genome.gene.gff3 -o ${i}.gtf ${i}.bam -A gene_abund.tab -B -e
 done
