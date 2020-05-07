@@ -9,7 +9,8 @@ done
 
 for i in *.sam;
 do 
-i=${i%.sam*}; samtools sort -@ 20 -o ${i}.bam ${i}.sam 
+i=${i%.sam*}; 
+samtools sort -@ 20 -o ${i}.bam ${i}.sam 
 done
 
 
